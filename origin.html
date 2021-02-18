@@ -4,151 +4,137 @@
   <!-- <link rel="stylesheet" href="origin.css">     -->
   <title>Origin</title>
   <style>
-    body{
-      margin:100px;
-    }
+    /* header styling */
+    .header{}
+
     /* footer styling */
     footer{
+      background:blue;
+    }
+    .footer-container {
+      margin: 15%;
+      background:red;
       border:1px black solid;
-      background-color: blue;
+      /* width:100%; */
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: left;
+      align-items: flex-start;
+      align-content: space-between;
+      box-sizing: border-box;
     }
-    .footer-container{
-      margin-left:10px;
+    .footer-externalLinks {
+      border:1px yellow dotted;
+      width:30%;
+      height:100%;
+      box-sizing: border-box;
+    }
+    .footer-contactForm {
+      border:1px yellow dotted;
+      width:70%;
+      box-sizing: border-box;
+      text-align:right;
+    }
 
-    }
-    .footer-externalLinks{
-      border:1px black solid;
-    }
-    .footer-nav{
-      /* border:1px black solid; */
-
-    }
-    .footer-contactForm{
-      /* border:1px black solid; */
-      
-    }
   </style>
 </head>
 <body>
-
-<header>
-    
-  <div class="header-container"></div>
-    <!-- search bar --> 
-    <div class="header-search" >
-      <p>Find me somewhere to stay...</p>
-      <form>
-        <input type="text" class="search" placeholder="Location">
-        <input type="date" class="date-from" placeholder="Check Out">
-        <input type="date" class="date-to" placeholder="Check Out">
-        <input type="text" class="guests" placeholder="Number of Guests">
-        <button type="submit" class="button">Search</button>
-      </form>      
-    </div>
-    <!-- navigation bar -->
-    <nav class="header-nav">
-      <ul>
-        <li><a href="#">Menu Item 1</a></li>
-        <li><a href="#">Menu Item 2</a></li>
-        <li><a href="#">Menu Item 3</a></li>
-      </ul>
-    </nav>
-  <div class="header-title">
-    <h1>Origin</h1>
-  </div>
-</header>
-
-<main>
-  <nav class="main-nav">
-    <ul>
-      <li><button>Nature</button></li>
-      <li><button>City</button></li>
-      <li><button>Beach</button></li>
-      <li><button>Cold</button></li>
-    </ul>
-  </nav>
-  <article class=main-largeArticle>
-    <img class = "mainimg" src= "naturepanoram.jpg">
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </article>
-
-  <article class="main-relatedProperties">
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-      <h2>Title</h2>
-      <p>Some Text...</p>
-    </article>
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-      <h2>Title</h2>
-      <p>Some Text...</p>
-    </article>
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-      <h2>Title</h2>
-      <p>Some Text...</p>
-    </article>
-  </article>
-</main>
-
-
-
-
-<!-- Footer -->
-
-<!-- External links -->
-<footer>
-  <div class="footer-Container">
-    <div class= "footer-externalLinks">
-      <h3>External links</h3>
-      <nav class= "footer-nav">
+  <header>
+      
+    <div class="header-container"></div>
+      <!-- search bar --> 
+      <div class="header-search" >
+        <p>Find me somewhere to stay...</p>
+        <form>
+          <input type="text" class="search" placeholder="Location">
+          <input type="date" class="date-from" placeholder="Check Out">
+          <input type="date" class="date-to" placeholder="Check Out">
+          <input type="text" class="guests" placeholder="Number of Guests">
+          <button type="submit" class="button">Search</button>
+        </form>      
+      </div>
+      <!-- navigation bar -->
+      <nav class="header-nav">
         <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Menu Item 1</a></li>
+          <li><a href="#">Menu Item 2</a></li>
+          <li><a href="#">Menu Item 3</a></li>
         </ul>
       </nav>
-    </div> 
-
-    <!-- Contact form --> 
-    <div class="footer-contactForm">
-      <h3>Leave some feedback</h3>
-      <form action="submit">
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Your name"><br>
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Your last name"><br>
-        <label for="phonenumber">Phone Number</label>
-        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Your phone number"><br>
-
-        <label for="email">Email Address</label>
-        <input type="text" id="emailaddress" name="emailaddress" placeholder="Your phone number"><br>
-    
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="uk">UK</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select><br>
-    
-        <label for="subject">Feedback</label>
-        <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
-    
-        <input type="submit" value="Submit">
-    
-      </form>
-
+    <div class="header-title">
+      <h1>Origin</h1>
     </div>
-  </div>
- 
-</footer>  
-
-</div>
-
-
-
-
-
+  </header>
+  <main>
+    <nav class="main-nav">
+      <ul>
+        <li><button>Nature</button></li>
+        <li><button>City</button></li>
+        <li><button>Beach</button></li>
+        <li><button>Cold</button></li>
+      </ul>
+    </nav>
+    <article class=main-largeArticle>
+      <img class = "mainimg" src= "naturepanoram.jpg">
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </article>
+    <article class="main-relatedProperties">
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
+        <h2>Title</h2>
+        <p>Some Text...</p>
+      </article>
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
+        <h2>Title</h2>
+        <p>Some Text...</p>
+      </article>
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
+        <h2>Title</h2>
+        <p>Some Text...</p>
+      </article>
+    </article>
+  </main>
+  <footer>
+    <!-- Footer -->
+    <div class="footer-container">
+      <!-- External links -->
+      <div class= "footer-externalLinks">
+        <h3>External links</h3>
+        <nav class= "footer-nav">
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </nav>
+      </div> 
+      <!-- Contact form --> 
+      <div class="footer-contactForm">
+        <h3>Leave some feedback</h3>
+        <form action="submit">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Your name"><br>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Your last name"><br>
+          <label for="phonenumber">Phone Number</label>
+          <input type="tel" id="phonenumber" name="phonenumber" placeholder="Your phone number"><br>
+          <label for="email">Email Address</label>
+          <input type="text" id="emailaddress" name="emailaddress" placeholder="Your phone number"><br>
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="subject">Feedback</label>
+          <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </footer>  
 </body>
 </html>
 
