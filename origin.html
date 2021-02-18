@@ -6,8 +6,64 @@
   <style>
 
     body{
-      margin:100px;
       font-family: Verdana,sans-serif;
+    }
+    /* header styling */
+    header{
+      color:#2AB7CA;
+      background:#465C69;
+    }
+    .header-container {
+      margin: 0 15%;
+      border:5px black solid;
+      display: flex;
+      flex-flow: row wrap;
+      /* justify-content: left; */
+      /* align-items: flex-start; */
+      align-content: space-between;
+      box-sizing: border-box;
+    }
+    .header-title {
+      border:1px yellow dotted;
+      width:50%;
+      min-height:100%;
+      box-sizing: border-box;
+    }
+    .header-nav {
+      border:1px yellow dotted;
+      width:50%;
+      align-self:flex-end;
+      box-sizing: border-box;
+    }
+    .header-search {
+      border:1px yellow dotted;
+      /* width:50%; */
+      height:50%;
+      box-sizing: border-box;
+    }
+
+    .header-navBar ul {
+      list-style-type: none;
+      display:flex;
+      flex-direction:row;
+      box-sizing: border-box;
+      border: 1px solid pink;
+      margin:0 0;
+      
+    }
+    .header-navBar li{
+      display:inline;
+      align-self: flex-start;
+      width:35%;
+      box-sizing:border-box;
+      border:1px solid saddlebrown;
+    }
+    .header-navBar li:hover{
+      display:inline;
+      align-self: flex-start;
+      width:35%;
+      box-sizing:border-box;
+      border:1px solid saddlebrown;
     }
 
     main{
@@ -31,10 +87,6 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      
-      
-
-
     }
 
     .main-nav li {
@@ -102,11 +154,12 @@
 
     /* footer styling */
     footer{
-      background:blue;
+      color:#2AB7CA;
+      background:#465C69;
     }
     .footer-container {
-      margin: 15%;
-      background:red;
+      margin: 0 15%;
+      background:#FAFF7F;
       border:1px black solid;
       /* width:100%; */
       display: flex;
@@ -133,29 +186,29 @@
 </head>
 <body>
   <header>
-      
-    <div class="header-container"></div>
-      <!-- search bar --> 
-      <div class="header-search" >
-        <p>Find me somewhere to stay...</p>
-        <form>
-          <input type="text" class="search" placeholder="Location">
-          <input type="date" class="date-from" placeholder="Check Out">
-          <input type="date" class="date-to" placeholder="Check Out">
-          <input type="text" class="guests" placeholder="Number of Guests">
-          <button type="submit" class="button">Search</button>
-        </form>      
+    <div class="header-container">
+      <div class="header-title">
+        <h1>Origin</h1>
       </div>
-      <!-- navigation bar -->
-      <nav class="header-nav">
-        <ul>
-          <li><a href="#">Menu Item 1</a></li>
-          <li><a href="#">Menu Item 2</a></li>
-          <li><a href="#">Menu Item 3</a></li>
-        </ul>
-      </nav>
-    <div class="header-title">
-      <h1>Origin</h1>
+      <div class="header-nav">
+        <div class="header-search" >
+          <p>Find me somewhere to stay...</p>
+          <form>
+            <input type="text" class="search" placeholder="Location">
+            <input type="date" class="date-from" placeholder="Check Out">
+            <input type="date" class="date-to" placeholder="Check Out">
+            <input type="text" class="guests" placeholder="Number of Guests">
+            <button type="submit" class="button">Search</button>
+          </form>      
+        </div>
+        <nav class="header-navBar">
+          <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
