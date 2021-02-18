@@ -4,8 +4,101 @@
   <!-- <link rel="stylesheet" href="origin.css">     -->
   <title>Origin</title>
   <style>
-    /* header styling */
-    .header{}
+
+    body{
+      margin:100px;
+      font-family: Verdana,sans-serif;
+    }
+
+    main{
+
+      /*properties related to the whole main section*/ 
+      width: 100%;
+      font: helvetica;
+      
+    }
+
+    .main-nav{
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      
+    }
+
+    .main-nav ul { 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      
+      
+
+
+    }
+
+    .main-nav li {
+      float: left;
+    }
+
+    .main-nav li button {
+      display: block;
+      color:white;
+      text-align: center;
+      padding: 14px 16px;
+      background-color:#333;
+      font-size:larger;
+      border: none;
+      
+    }
+
+    .main-nav li button:hover{
+      background-color: black;
+    }
+    .main-largeArticle{
+      /*panoramic image and text*/ 
+      width: 100%;
+     
+    }
+
+    .mainimg{
+      /* format panormaic image*/
+      width: 100%;
+      
+    
+    }
+    .main-relatedProperties{
+      /* flexbox to position adjacent images*/
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      
+      
+
+    }
+
+    .main-relatedProperty{
+      /* format the images and description text*/
+      background-color: #333;
+
+    }
+    .main-relatedPropertytext{
+      /* text underneath property images*/
+      text-align: center;
+      padding: 2px 6px;
+      color: white;
+      
+    
+
+    }
+    .main-largetext{
+      text-align:center;
+      
+    }
+
+
+
 
     /* footer styling */
     footer{
@@ -65,37 +158,46 @@
       <h1>Origin</h1>
     </div>
   </header>
-  <main>
-    <nav class="main-nav">
-      <ul>
-        <li><button>Nature</button></li>
-        <li><button>City</button></li>
-        <li><button>Beach</button></li>
-        <li><button>Cold</button></li>
-      </ul>
-    </nav>
-    <article class=main-largeArticle>
-      <img class = "mainimg" src= "naturepanoram.jpg">
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+<main>
+  <nav class="main-nav">
+    <ul>
+      <li><button>Nature</button></li>
+      <li><button>City</button></li>
+      <li><button>Beach</button></li>
+      <li><button>Adventure</button></li>
+      
+    </ul>
+  </nav>
+  <article class=main-largeArticle>
+    <img class = "mainimg" src= "naturepanoram.jpg">
+    <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </article>
+
+  <article class="main-relatedProperties">
+    <article class="main-relatedProperty">
+      <img src="Housepic1.jpg" alt="Trulli" width=350px height =270px>
+      <div class= "main-relatedPropertytext">
+      <h2>Cottage</h2>
+      
+      </div>
     </article>
-    <article class="main-relatedProperties">
-      <article class="main-relatedProperty">
-        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-        <h2>Title</h2>
-        <p>Some Text...</p>
-      </article>
-      <article class="main-relatedProperty">
-        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-        <h2>Title</h2>
-        <p>Some Text...</p>
-      </article>
-      <article class="main-relatedProperty">
-        <img src="Housepic1.jpg" alt="Trulli" width=300px height =270px>
-        <h2>Title</h2>
-        <p>Some Text...</p>
-      </article>
+    <article class="main-relatedProperty">
+      <img src="Housepic1.jpg" alt="Trulli" width=350px height =270px >
+      <div class= "main-relatedPropertytext">
+      <h2>Camping</h2>
+      
+      </div>
     </article>
-  </main>
+    <article class="main-relatedProperty">
+      <img src="Housepic1.jpg" alt="Trulli" width=350px height =270px >
+      <div class= "main-relatedPropertytext">
+      <h2>Cabin</h2>
+      
+      </div>
+    </article>
+  </article>
+</main>
   <footer>
     <!-- Footer -->
     <div class="footer-container">
