@@ -1,230 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- <link rel="stylesheet" href="origin.css">     -->
+  <link rel="stylesheet" href="origin.css">  
   <title>Origin</title>
-  <style>
-
-    body{
-      font-family: Verdana,sans-serif;
-      background-color: #f5f5f5;
-    }
-    /* header styling */
-    header{
-      color:#2AB7CA;
-      background:#465C69;
-    }
-    .header-container {
-      margin: 0 15%;
-      border:5px black solid;
-      display: flex;
-      flex-flow: row wrap;
-      /* justify-content: left; */
-      /* align-items: flex-start; */
-      align-content: space-between;
-      box-sizing: border-box;
-    }
-    .header-title {
-      border:1px yellow dotted;
-      width:50%;
-      min-height:100%;
-      box-sizing: border-box;
-    }
-    .header-nav {
-      border:1px yellow dotted;
-      width:50%;
-      align-self:flex-end;
-      box-sizing: border-box;
-    }
-    .header-search {
-      border:1px yellow dotted;
-      /* width:50%; */
-      height:50%;
-      box-sizing: border-box;
-    }
-    .header-search form{
-      display:flex;
-    }
-    .header-search input{
-      display:inline;
-      box-sizing: border-box;
-      width:20%;
-      background-color:chartreuse;
-      border:none;
-      font-size: small;
-
-    }
-    .header-search button{
-      box-sizing: border-box;
-      width:20%;
-      background-color:pink;
-      border:none;
-    }
-
-    .header-navBar ul {
-      list-style-type: none;
-      display:flex;
-      flex-direction:row;
-      box-sizing: border-box;
-      border: 1px solid pink;
-      margin:0 0;
-      
-    }
-    .header-navBar li{
-      display:inline;
-      align-self: flex-start;
-      width:35%;
-      box-sizing:border-box;
-      border:1px solid saddlebrown;
-    }
-    .header-navBar li:hover{
-      display:inline;
-      align-self: flex-start;
-      width:35%;
-      box-sizing:border-box;
-      border:1px solid saddlebrown;
-    }
-
-    main{
-
-      /*properties related to the whole main section*/ 
-      /* width: 100%; */
-      font: helvetica;
-      margin:0 15%;
-      
-    }
-
-    .main-nav{
-      list-style-type:none;
-      margin: 0;
-      padding: 0;
-      background-color: #869CB8;
-      
-    }
-
-    .main-nav ul { 
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .main-nav li {
-      float: left;
-    }
-
-    .main-nav li button {
-      display: block;
-      color:white;
-      text-align: center;
-      padding: 14px 16px;
-      background-color:#869CB8;
-      font-size:larger;
-      border: none;
-      
-    }
-
-    .main-nav li button:hover{
-      background-color: #5e738e;
-    }
-    .main-largeArticle{
-      /*panoramic image and text*/ 
-      width: 100%;
-     
-    }
-
-    .mainimg{
-      /* format panormaic image*/
-      width: 100%;
-      
+  <script
+      src="https://kit.fontawesome.com/baeb783242.js"
+      crossorigin="anonymous"
+    ></script>
+<script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      i></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
-    }
-    .main-relatedProperties{
-      /* flexbox to position adjacent images*/
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      
-    }
-
-    .main-relatedProperty{
-      /* format the images and description text*/
-      background-color: #869CB8;
-      width: 30%;
-      height :70%;
-    }
-    .main-relatedProperty:hover{
-      opacity: 0.75;
-    }
-
-    
-    .main-relatedPropertytext{
-      /* text underneath property images*/
-      text-align: center;
-      padding: 2px 6px;
-      color: white;
-      font-size:80%;
-
-    }
-    .main-largetext{
-      text-align:center;
-      
-    }
-    /* footer styling */
-    footer{
-      color:#2AB7CA;
-      background:#465C69;
-    }
-    .footer-container {
-      margin: 0 15%;
-      background:#FAFF7F;
-      border:1px black solid;
-      /* width:100%; */
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: left;
-      align-items: flex-start;
-      align-content: space-between;
-      box-sizing: border-box;
-    }
-    .footer-externalLinks {
-      border:1px yellow dotted;
-      width:30%;
-      height:100%;
-      box-sizing: border-box;
-    }
-    .footer-contactForm {
-      border:1px yellow dotted;
-      width:70%;
-      box-sizing: border-box;
-      text-align:right;
-    }
-
-  </style>
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="header-title">
-        <h1>Origin</h1>
+        <img src="Origin.png">
       </div>
       <div class="header-nav">
         <div class="header-search" >
-          <p>Find me somewhere to stay...</p>
+          <p id="alert-response">Find me somewhere to stay... <span id="date-time"></span></p>
           <form>
-            <input type="text" class="search" placeholder="Location">
-            <input type="date" class="date-from" placeholder="Check In">
-            <input type="date" class="date-to" placeholder="Check Out">
-            <input type="text" class="guests" placeholder="Number of Guests">
-            <button type="submit" class="button">Search</button>
+            <input type="text" class="header-search-inputLocation" placeholder="Where?">
+            <input type="date" class="header-search-inputStartDate" placeholder="Check In">
+            <input type="date" class="header-search-inputEndDate" placeholder="Check Out">
+            <input type="text" class="header-search-inputNumOfGuests" placeholder="Guests?">
+            <button type="submit" class="header-search-button"><i class="fas fa-search"></i></button>
           </form>      
         </div>
         <nav class="header-navBar">
           <ul>
-            <li><a href="#">Menu Item 1</a></li>
-            <li><a href="#">Menu Item 2</a></li>
-            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a id="feedback-btn" href="#">Feedback</a></li>
           </ul>
         </nav>
       </div>
@@ -234,41 +45,178 @@
 <main>
   <nav class="main-nav">
     <ul>
-      <li><button>Nature</button></li>
+      <li><button class="dot">Nature</button></li>
       <li><button>City</button></li>
       <li><button>Beach</button></li>
       <li><button>Adventure</button></li>
-      
     </ul>
   </nav>
-  <article class=main-largeArticle>
-    <img class = "mainimg" src= "naturepanoram2.jpg">
-    <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </article>
 
-  <article class="main-relatedProperties">
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
-      <div class= "main-relatedPropertytext">
-      <h2>Cottage</h2>
-      
+<div class="carousel js-flickity">
+         
+          <div class="carousel-cell">
+            <div class="main-View">
+              <article class=main-largeArticle>
+                <img class = "mainimg" src= "naturepanoram2.jpg">
+                <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+              </article>
+              <article class="main-relatedProperties">
+                <article class="main-relatedProperty">
+                  <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+                  <div class= "main-relatedPropertytext">
+                  <h2>Cottage</h2>
+                  
+                  </div>
+                </article>
+                <article class="main-relatedProperty">
+                  <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+                  <div class= "main-relatedPropertytext">
+                  <h2>Camping</h2>
+                  </div>
+                </article>
+                <article class="main-relatedProperty">
+                  <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+                  <div class= "main-relatedPropertytext">
+                  <h2>Cabin</h2>
+                  </div>
+                </article>
+              </article>
+            </div>
+       
+          </div>
+          <div class="carousel-cell">
+            <img src="https://photos.holidaylettings.co.uk/media/vr-splice-l/03/71/4a/41.jpg" alt="green shake" />
+            <button class="btn">Shop Deal</button>
+          </div>
+          <div class="carousel-cell">
+            <img src="https://photos.holidaylettings.co.uk/media/vr-splice-l/03/71/4a/41.jpg" alt="strawberry shake" />
+            <button class="btn">Shop Deal</button>
+           
+          </div>
+    
+
+  
+  <!-- <div class="carousel js-flickity">       
+    <div class="carousel-cell">
+        <article class=main-largeArticle>
+          <img class = "mainimg" src= "naturepanoram2.jpg">
+          <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </article>
+        <article class="main-relatedProperties">
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cottage</h2>
+            
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Camping</h2>
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cabin</h2>
+            </div>
+          </article>
+        </article>
       </div>
-    </article>
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
-      <div class= "main-relatedPropertytext">
-      <h2>Camping</h2>
+    </div>
+    <div class="carousel-cell">
+      <div class="main-View">
+        <article class=main-largeArticle>
+          <img class = "mainimg" src= "naturepanoram2.jpg">
+          <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </article>
       
+        <article class="main-relatedProperties">
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cottage</h2>
+            
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Camping</h2>
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cabin</h2>
+            </div>
+          </article>
+        </article>
       </div>
-    </article>
-    <article class="main-relatedProperty">
-      <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
-      <div class= "main-relatedPropertytext">
-      <h2>Cabin</h2>
+    </div>
+    <div class="carousel-cell">
+      <div class="main-View">
+        <article class=main-largeArticle>
+          <img class = "mainimg" src= "naturepanoram2.jpg">
+          <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </article>
       
+        <article class="main-relatedProperties">
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cottage</h2>
+            
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Camping</h2>
+            </div>
+          </article>
+          <article class="main-relatedProperty">
+            <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+            <div class= "main-relatedPropertytext">
+            <h2>Cabin</h2>
+            </div>
+          </article>
+        </article>
       </div>
+    </div>
+  </div> -->
+    
+    
+  <!-- <div class="main-View">
+    <article class=main-largeArticle>
+      <img class = "mainimg" src= "naturepanoram2.jpg">
+      <p class= main-largetext>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </article>
+  
+    <article class="main-relatedProperties">
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+        <div class= "main-relatedPropertytext">
+        <h2>Cottage</h2>
+        
+        </div>
+      </article>
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+        <div class= "main-relatedPropertytext">
+        <h2>Camping</h2>
+        </div>
+      </article>
+      <article class="main-relatedProperty">
+        <img src="Housepic1.jpg" alt="Trulli" width = 100% height = 100%>
+        <div class= "main-relatedPropertytext">
+        <h2>Cabin</h2>
+        </div>
+  </div>
   </article>
+  </article>
+-->
 </main>
   <footer>
     <!-- Footer -->
@@ -292,15 +240,15 @@
           <input type="text" id="firstname" name="firstname" placeholder="Your name"><br>
           <label for="lastname">Last Name</label>
           <input type="text" id="lastname" name="lastname" placeholder="Your last name"><br>
-          <label for="phonenumber">Phone Number</label>
-          <input type="tel" id="phonenumber" name="phonenumber" placeholder="Your phone number"><br>
+          <!-- <label for="phonenumber">Phone Number</label>
+          <input type="tel" id="phonenumber" name="phonenumber" placeholder="Your phone number"><br> -->
           <label for="email">Email Address</label>
           <input type="text" id="emailaddress" name="emailaddress" placeholder="Your phone number"><br>
-          <label for="country">Country</label>
+          <!-- <label for="country">Country</label>
           <select id="country" name="country">
             <option value="uk">UK</option>
             <option value="canada">Canada</option>
-            <option value="usa">USA</option>
+            <option value="usa">USA</option> -->
           </select>
           <label for="subject">Feedback</label>
           <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
@@ -309,6 +257,9 @@
       </div>
     </div>
   </footer>  
+         
+          
+  <script src="origin.js"></script>
 </body>
 </html>
 
