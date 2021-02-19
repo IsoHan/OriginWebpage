@@ -42,6 +42,24 @@
       height:50%;
       box-sizing: border-box;
     }
+    .header-search form{
+      display:flex;
+    }
+    .header-search input{
+      display:inline;
+      box-sizing: border-box;
+      width:20%;
+      background-color:chartreuse;
+      border:none;
+      font-size: small;
+
+    }
+    .header-search button{
+      box-sizing: border-box;
+      width:20%;
+      background-color:pink;
+      border:none;
+    }
 
     .header-navBar ul {
       list-style-type: none;
@@ -70,8 +88,9 @@
     main{
 
       /*properties related to the whole main section*/ 
-      width: 100%;
+      /* width: 100%; */
       font: helvetica;
+      margin:0 15%;
       
     }
 
@@ -195,7 +214,7 @@
           <p>Find me somewhere to stay...</p>
           <form>
             <input type="text" class="search" placeholder="Location">
-            <input type="date" class="date-from" placeholder="Check Out">
+            <input type="date" class="date-from" placeholder="Check In">
             <input type="date" class="date-to" placeholder="Check Out">
             <input type="text" class="guests" placeholder="Number of Guests">
             <button type="submit" class="button">Search</button>
